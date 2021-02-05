@@ -9,21 +9,44 @@
     <title>business-lab</title>
 </head>
 <body>
-    <header class="header">
-            <div class="header-logo">
-                logo
+    <header class="header container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="img/expologo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Курсы</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Акселератор</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Нетворкинг</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-auth" href="#">
+                        <img src="img/log-out.png" alt="">
+                        Войти</a>
+                  </li>
+              </ul>
             </div>
-            <div class="header-auth">
-                <a href="#" class="btn btn-auth">Регистрация</a>
-                <a href="#" class="btn btn-auth">Войти</a>
-            </div>
+        </nav>
     </header>
-    <main class="main-conten">
-            <h1 class="main-conten__title">
+    <main class="main container">
+        <div class="main-content">
+            <h1 class="main-content__title">
                 Помогаем воплотить
                 идеи в реальность!
             </h1>
-            <p class="main-conten__suptitle">
+            <p class="main-content__suptitle">
                 Получи необходимые знания и навыки для успешного старта, 
                 прокачай свой стартап по лучшим мировым практикам. 
                 Пройди путь от идеи до успешного продукта под руководством опытных 
@@ -32,6 +55,136 @@
             <a href="#" class="btn btn-study">
                 Начать обучение
             </a>
+        </div>
+        <img src="img/bg.jpg" alt="" class="bg-banner">
     </main>
+
+    <section>
+        <div class="container">
+            <div class="fillter row">
+                <div class="col-lg-2 fillter-aside">
+                    <div class="fillter-aside__direction">
+                        <p class="fillter-aside__direction-title">Направление</p>
+                        <div class="fillter-aside__direction-items">
+                            <div class="item"><input type="checkbox" id="design"><label for="design">Дизайн</label></div>
+                            <div class="item"><input type="checkbox" id="program"><label for="program">Программирование</label></div>
+                            <div class="item"><input type="checkbox" id="project"><label for="project">Проекты</label></div>
+                            <div class="item"><input type="checkbox" id="econom"><label for="econom">Экономика</label></div>
+                            <div class="item"><input type="checkbox" id="management"><label for="management">Менеджмент</label></div>
+                            <div class="item"><input type="checkbox" id="investments"><label for="investments">Инвестиции</label></div>
+                            <div class="item"><input type="checkbox" id="analytics"><label for="analytics">Аналитика</label></div>
+                            <div class="item"><input type="checkbox" id="dev"><label for="dev">Разработка ПО</label></div>
+                            <div class="item"><input type="checkbox" id="finance"><label for="finance">Финансы</label></div>
+                            <div class="item"><input type="checkbox" id="other"><label for="other">Другое</label></div>
+                        </div>
+                    </div>
+    
+                    <div class="fillter-aside__duration">
+                        <p class="fillter-aside__direction-title">Длительность</p>
+                        <label for="range">От 1 до 6 месяцев</label>
+                        <input type="range" id="range">
+                    </div>
+    
+                    <div class="fillter-aside__level">
+                        <p class="fillter-aside__direction-title">Уровень сложности</p>
+                        <div class="item"><input type="radio" id="other-level"><label for="other-level">Любой</label></div>
+                        <div class="item"><input type="radio" id="junior-level"><label for="junior-level">Для новичков</label></div>
+                        <div class="item"><input type="radio" id="senior-level"><label for="senior-level">Для специалистов</label></div>
+                    </div>
+    
+    
+                </div>
+                <div class="col-lg-9 fillter-content">
+                    <div class="fillter-courses">
+                        <img src="img/Illustration.png" alt="" class="bg-courses">
+                        <div class="courses fillter-courses__info">
+                            <p class="fillter-courses__info-title">Презентации в PowerPoint</p>
+                            <p class="fillter-courses__info-subtitle">Как быть эффективным, как при меньших ресурсах получать 
+                                большие результаты, как быстрее и легче 
+                                приходить к целям - ответы и практические рекомендации</p>
+                                <div class="fillter-courses__info-training">
+                                    <span>
+                                        <img src="img/play.png" alt="">
+                                        25 занятий
+                                    </span>
+                                    <span>
+                                        <img src="img/clock.png" alt="">
+                                        35 часов
+                                    </span>
+                                    <a href="#">Вебинар</a>
+                                </div>
+                        </div>
+                    </div>
+                    <div class="fillter-courses">
+                        <img src="img/Illustration.png" alt="" class="bg-courses">
+                        <div class="courses fillter-courses__info">
+                            <p class="fillter-courses__info-title">Презентации в PowerPoint</p>
+                            <p class="fillter-courses__info-subtitle">Как быть эффективным, как при меньших ресурсах получать 
+                                большие результаты, как быстрее и легче 
+                                приходить к целям - ответы и практические рекомендации</p>
+                                <div class="fillter-courses__info-training">
+                                    <span>
+                                        <img src="img/play.png" alt="">
+                                        25 занятий
+                                    </span>
+                                    <span>
+                                        <img src="img/clock.png" alt="">
+                                        35 часов
+                                    </span>
+                                    <a href="#">Вебинар</a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row footer">
+                <div class="footer-top">
+                    <img src="img/logo-white.png" alt="" class="footer-top__img">
+                    <div class="footer-top__social">
+                        <img src="img/inst.png" alt="">
+                        <img src="img/in.png" alt="">
+                        <img src="img/you.png" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Курсы</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Акселератор</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Нетворкинг</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
+                    <a href="#" class="footer-bottom__call">+ 7 (928) 123-45-67</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/bootstrap.min.js"></script>
+    
 </body>
 </html>

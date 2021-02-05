@@ -9,12 +9,260 @@ $body-bg__light: #242424;
 }
 body{
     background-color: $body-bg;
+    font-family: "Montserrat";
 }
 a:hover{
     text-decoration: none;
 }
+.container{
+    width: 1281px !important;
+}
 
 
+
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 36px 0;
+    &-brand{
+        img{
+            width: 240px;
+            height: 34px;
+        }
+    }
+    .collapse{
+        justify-content: flex-end;
+        align-items: center;
+        .nav-auth{
+            display: flex;
+            align-items: center;
+            img{
+                width: 24px;
+                height: 24px;
+                margin-right: 5px;
+            }
+        }
+        a{
+            color: #F0F0F0;
+        }
+    }
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin: 100px auto;
+    &-content{
+        max-width: 600px;
+        &__title{
+        font-size: 36px;
+        line-height: 48px;
+        color: #F0F0F0;
+        margin-bottom: 24px;
+        }
+        &__suptitle{
+        font-size: 18px;
+        line-height: 32px;
+        color: #626262;
+        margin-bottom: 48px;
+        }
+        .btn-study{
+        border: 1px solid #338BFF;
+        border-radius: 40px;
+        color: #338BFF;
+        padding: 13px 55px;
+        &:hover{
+            background-color: #338BFF;
+            color: #F0F0F0;
+            transition: 1s;
+        }
+        }
+    }
+    .bg-banner{
+        max-width: 600px;
+        height: auto;
+    }
+}
+
+
+.fillter{
+    display: flex;
+    justify-content: space-between;
+    padding: 240px 0;
+    font-size: 16px;
+    line-height: 20px;
+    color: #626262;
+    &-aside{
+        &__direction{
+            margin-bottom: 50px;
+            &-title{
+            font-size: 20px;
+            line-height: 19px;
+            color: #CCCCCC;
+            margin-bottom: 24px;
+            }
+            &-items{
+                .item{
+                    margin-bottom: 12px;
+                    input{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        &__duration{
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__level{
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="checkbox"]:checked, 
+        input[type="checkbox"]:not(:checked){
+            position: absolute;
+            left: -9999px;
+        }
+        input[type="checkbox"]:checked + label, 
+        input[type="checkbox"]:not(:checked) + label{
+            display: inline-block;
+            position: relative;
+            padding-left: 28px;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        input[type="checkbox"]:checked + label:before, 
+        input[type="checkbox"]:not(:checked) + label:before{
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #dddddd;
+            background-color: transparent;
+        }
+        input[type="checkbox"]:checked + label:before, 
+        input[type="checkbox"]:not(:checked) + label:before {
+            border-radius: 2px;
+        }
+        input[type="checkbox"]:checked + label:after, 
+        input[type="checkbox"]:not(:checked) + label:after {
+            content: "";
+            position: absolute;
+            transition: all 0.2s ease;
+        }
+        input[type="checkbox"]:checked + label:after, 
+        input[type="checkbox"]:not(:checked) + label:after {
+            left: 4px;
+            top: 5px;
+            width: 10px;
+            height: 5px;
+            border-left: 2px solid #338BFF;
+            border-bottom: 2px solid #338BFF; 
+            transform: rotate(-45deg);
+        }
+        input[type="checkbox"]:not(:checked) + label:after{
+            opacity: 0;
+        }
+        input[type="checkbox"]:checked + label:after{
+            opacity: 1;
+        }
+    }
+
+    &-courses{
+        display: flex;
+        align-items: center;
+        padding: 12px 36px;
+        background: #242424;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+        border-radius: 8px;
+        margin-bottom: 36px;
+        .bg-courses{
+            max-width: 169px;
+            height: 215px;
+            margin-right: 20px;
+        }
+        &__info{
+            &-title{
+                font-size: 24px;
+                line-height: 32px;
+                color: #F0F0F0
+            }
+            &-subtitle{
+                font-size: 16px;
+                line-height: 24px;
+                color: #828282;
+            }
+            &-training{
+                display: flex;
+                justify-content: flex-start;
+
+                span{
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: #338BFF;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 20px;
+                    img{
+                        max-width: 20px;
+                        height: 20px;
+                        margin-right: 5px;
+                    }
+                }
+                a{
+                    padding: 4px 32px;
+                    border-radius: 20px;
+                    font-size: 12px;
+                    color: #F0F0F0;
+                    border: 1px solid #f0f0f0;
+                }
+            }
+        }
+    }
+}
+
+
+
+.footer{
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        &__img{
+            max-width: 240px;
+            height: 34px;
+        }
+        &__social{
+            img{
+                max-width: 100%;
+                height: 24px;
+                margin-left: 10px;
+            }
+        }
+    }
+        &-bottom{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            &__call{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+        }
+}
+
+
+
+
+//страница Войти и Регистрация
 
 .main-form{
     img{
