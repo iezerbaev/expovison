@@ -6,7 +6,8 @@
 
 body {
   background-color: #212121;
-  font-family: "Montserrat"; }
+  font-family: "Montserrat";
+  font-weight: 200; }
 
 a:hover {
   text-decoration: none; }
@@ -355,3 +356,335 @@ a:hover {
       font-size: 16px;
       line-height: 20px;
       color: #626262; }
+
+.personal-bio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 70px 0; }
+  .personal-bio__info {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .personal-bio__info img {
+      border-radius: 100px;
+      max-width: 120px;
+      height: 120px; }
+    .personal-bio__info .personal-bio__text {
+      max-width: 365px;
+      margin-left: 25px; }
+      .personal-bio__info .personal-bio__text-name {
+        font-size: 24px;
+        line-height: 23px;
+        color: #F0F0F0; }
+      .personal-bio__info .personal-bio__text-profession {
+        font-size: 18px;
+        line-height: 28px;
+        color: #626262; }
+  .personal-bio__skills {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .personal-bio__skills p {
+      font-size: 18px;
+      line-height: 22px;
+      color: #BDBDBD;
+      font-weight: 200;
+      margin-left: 30px; }
+      .personal-bio__skills p span {
+        color: #338BFF;
+        font-weight: 500; }
+  .personal-bio .personal-cabinet__exit {
+    color: #626262; }
+
+/*
+For further documentation about CSS Icons, see this pen:
+https://codepen.io/stoumann/pen/eYzPVqe
+*/
+[data-css-icon] {
+  --animdur: .3s;
+  --loading-animdur: 0.8s;
+  --animtf: ease-in;
+  --bdw: 2px;
+  --bdrs: 50%;
+  --bgc: transparent;
+  --c: currentcolor;
+  --dots-bgc: silver;
+  --dots-size: 0.5rem;
+  --icon-size: 1rem;
+  --size: 2.5rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+[data-css-icon] i {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--bgc);
+  border-radius: var(--bdrs);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: var(--size);
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-transition: background-color var(--animdur) var(--animtf);
+  -o-transition: background-color var(--animdur) var(--animtf);
+  transition: background-color var(--animdur) var(--animtf);
+  width: var(--size); }
+
+[data-css-icon] i::after,
+[data-css-icon] i::before {
+  -webkit-transform-origin: 50% 50%;
+      -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  -webkit-transition: all var(--animdur) var(--animtf);
+  -o-transition: all var(--animdur) var(--animtf);
+  transition: all var(--animdur) var(--animtf); }
+
+[data-css-icon*="plus"] i::after,
+[data-css-icon*="plus"] i::before {
+  --w: calc(var(--icon-size) * 1.4142135623730950488016887242097);
+  background: var(--c);
+  content: '';
+  height: 1px;
+  position: absolute;
+  width: var(--w); }
+
+[data-css-icon*="plus"] i::before {
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+[open] > summary > [data-css-icon*="plus"] i::after {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+[open] > summary > [data-css-icon*="plus"] i::before {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg); }
+
+[open] > summary > [data-css-icon*="equals"] i::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+[open] > summary > [data-css-icon*="equals"] i::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+[open] > summary > [data-css-icon*="menu"] i {
+  background-color: transparent; }
+
+[open] > summary > [data-css-icon*="menu"] i::after {
+  -webkit-transform: translateY(calc(0px - var(--m))) rotate(-45deg);
+      -ms-transform: translateY(calc(0px - var(--m))) rotate(-45deg);
+          transform: translateY(calc(0px - var(--m))) rotate(-45deg); }
+
+[open] > summary > [data-css-icon*="menu"] i::before {
+  -webkit-transform: translateY(var(--m)) rotate(45deg);
+      -ms-transform: translateY(var(--m)) rotate(45deg);
+          transform: translateY(var(--m)) rotate(45deg); }
+
+/* RTL: inset-block-end fails */
+[dir="rtl"] [data-css-icon*="right"] i::after {
+  left: calc((var(--icon-size) / 4)); }
+
+[dir="rtl"] [data-css-icon*="menu"] i {
+  left: 0.5rem;
+  right: auto; }
+
+/* MODIFIERS */
+[data-css-icon*="outline"] i {
+  border: 1px solid var(--c); }
+
+[data-css-icon*="fill"] {
+  --bgc: hsl(195, 10%, 30%);
+  --c: hsl(195, 10%, 95%); }
+
+[data-css-icon*="square"] {
+  --bdrs: 5px; }
+
+/* For this demo only */
+body {
+  font-family: system-ui, sans-serif;
+  padding: 1rem; }
+
+button, details {
+  width: 100%; }
+
+button {
+  font-family: inherit;
+  font-size: inherit; }
+
+details {
+  height: var(--collapsed);
+  overflow: hidden;
+  -webkit-transition: height 300ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  -o-transition: height 300ms cubic-bezier(0.4, 0.01, 0.165, 0.99);
+  transition: height 300ms cubic-bezier(0.4, 0.01, 0.165, 0.99); }
+
+details[open] {
+  height: var(--expanded); }
+
+button,
+summary {
+  background-color: transparent;
+  border: 0;
+  margin: 0.5rem 0;
+  outline: none;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+  color: #FFFFFF;
+  border-top: 1px solid #F0F0F0; }
+
+summary::marker {
+  display: none; }
+
+summary::-webkit-details-marker {
+  display: none; }
+
+/* 4 States of summary */
+button,
+summary {
+  --bgc: hsl(195, 10%, 90%); }
+
+[open] > summary {
+  --bgc: hsl(195, 10%, 20%);
+  --c: hsl(195, 10%, 92%); }
+
+button:focus,
+summary:focus {
+  --bgc: hsl(195, 10%, 75%); }
+
+[open] > summary:focus {
+  --bgc: hsl(195, 10%, 10%);
+  --c: hsl(195, 10%, 99%); }
+
+details {
+  margin-bottom: 10px; }
+  details a {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    color: #626262;
+    margin-left: 20px;
+    font-weight: 200;
+    -webkit-text-decoration: solid;
+            text-decoration: solid;
+    margin-bottom: 20px;
+    overflow: hidden; }
+  details summary span {
+    font-size: 24px;
+    line-height: 23px;
+    color: #F0F0F0; }
+
+.person-courses {
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .person-courses__item {
+    width: 622px;
+    margin-bottom: 36px;
+    background: #242424;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    padding: 48px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+    .person-courses__item-text {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      .person-courses__item-text p {
+        font-size: 18px;
+        line-height: 28px;
+        color: #F0F0F0; }
+      .person-courses__item-text span {
+        font-size: 16px;
+        line-height: 20px;
+        color: #F0F0F0; }
+        .person-courses__item-text span:nth-child(2) {
+          color: #626262; }
+    .person-courses__item img {
+      max-width: 130px;
+      height: 130px; }
+    .person-courses__item .progress-courses {
+      width: 100%;
+      margin-top: 20px;
+      height: 100%; }
+      .person-courses__item .progress-courses progress {
+        width: 100%;
+        height: 18px; }
