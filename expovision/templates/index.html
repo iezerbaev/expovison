@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="static/css/bootstrap.css" />
-	<link rel="stylesheet" href="static/css/main.css" />
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>business-lab</title>
 </head>
@@ -12,7 +12,7 @@
     <header class="header container">
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="#">
-                <img src="static/img/expologo.png" alt="">
+                <img src="{{ url_for('static', filename='img/expologo.png') }}" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -32,8 +32,8 @@
                   <a class="nav-link" href="#">Контакты</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-auth" href="#">
-                        <img src="static/img/log-out.png" alt="">
+                    <a class="nav-link nav-auth" href="{{ url_for('register') }}">
+                        <img src="{{ url_for('static', filename='img/log-out.png') }}" alt="">
                         Войти</a>
                   </li>
               </ul>
@@ -56,7 +56,7 @@
                 Начать обучение
             </a>
         </div>
-        <img src="static/img/bg.jpg" alt="" class="bg-banner">
+        <img src="{{ url_for('static', filename='img/bg.jpg') }}" alt="" class="bg-banner">
     </main>
 
     <section>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="col-lg-9 fillter-content">
                     <div class="fillter-courses">
-                        <img src="img/Illustration.png" alt="" class="bg-courses">
+                        <img src="{{ url_for('static', filename='img/Illustration.png') }}" alt="" class="bg-courses">
                         <div class="courses fillter-courses__info">
                             <p class="fillter-courses__info-title">Презентации в PowerPoint</p>
                             <p class="fillter-courses__info-subtitle">Как быть эффективным, как при меньших ресурсах получать 
@@ -104,11 +104,11 @@
                                 приходить к целям - ответы и практические рекомендации</p>
                                 <div class="fillter-courses__info-training">
                                     <span>
-                                        <img src="img/play.png" alt="">
+                                        <img src="{{ url_for('static', filename='img/play.png') }}" alt="">
                                         25 занятий
                                     </span>
                                     <span>
-                                        <img src="img/clock.png" alt="">
+                                        <img src="{{ url_for('static', filename='img/clock.png') }}" alt="">
                                         35 часов
                                     </span>
                                     <a href="#">Вебинар</a>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <div class="fillter-courses">
-                        <img src="img/Illustration.png" alt="" class="bg-courses">
+                        <img src="{{ url_for('static', filename='img/Illustration.png') }}" alt="" class="bg-courses">
                         <div class="courses fillter-courses__info">
                             <p class="fillter-courses__info-title">Презентации в PowerPoint</p>
                             <p class="fillter-courses__info-subtitle">Как быть эффективным, как при меньших ресурсах получать 
@@ -124,11 +124,11 @@
                                 приходить к целям - ответы и практические рекомендации</p>
                                 <div class="fillter-courses__info-training">
                                     <span>
-                                        <img src="img/play.png" alt="">
+                                        <img src="{{ url_for('static', filename='img/play.png') }}" alt="">
                                         25 занятий
                                     </span>
                                     <span>
-                                        <img src="img/clock.png" alt="">
+                                        <img src="{{ url_for('static', filename='img/clock.png') }}" alt="">
                                         35 часов
                                     </span>
                                     <a href="#">Вебинар</a>
@@ -148,11 +148,11 @@
         <div class="container">
             <div class="row footer">
                 <div class="footer-top">
-                    <img src="static/img/logo-white.png" alt="" class="footer-top__img">
+                    <img src="{{ url_for('static', filename='img/logo-white.png') }}" alt="" class="footer-top__img">
                     <div class="footer-top__social">
-                        <img src="static/img/inst.png" alt="">
-                        <img src="static/img/in.png" alt="">
-                        <img src="static/img/you.png" alt="">
+                        <img src="{{ url_for('static', filename='img/inst.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/in.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/you.png') }}" alt="">
                     </div>
                 </div>
 
@@ -184,7 +184,7 @@
         </div>
     </footer>
     
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
     
 </body>
 </html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>business-lab</title>
+</head>
+<body>
+    <header class="header container">
+        <nav class="navbar navbar-expand-lg">
+            <a class="navbar-brand" href="#">
+                <img src="{{ url_for('static', filename='img/expologo.png') }}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Курсы</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Акселератор</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Нетворкинг</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Контакты</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-auth" href="{{ url_for('register') }}">
+                        <img src="{{ url_for('static', filename='img/log-out.png') }}" alt="">
+                        Войти</a>
+                  </li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container rating">
+        <div class="rating-item">
+            <div class="rating-item__top">
+                <div class="rating-item__top-select">
+                    <select>
+                        <option value="">Все направления</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                    <select>
+                        <option value="">За весь период</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <input type="search" placeholder="Поиск" class="search-rating">
+            </div>
+            <div class="rating-item__list">
+                <ol type="1">
+                    <li>
+                        <div class="list-person">
+                            <img src="{{ url_for('static', filename='img/1.png') }}" alt="">
+                            <p>Василий Коновалов</p>
+                        </div>
+                        <div class="list-rating personal-bio__skills">
+                            <p>рейтинг по специальности: <span>1</span></p>
+                            <p>кол-во баллов: <span>278</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-person">
+                            <img src="{{ url_for('static', filename='img/2.png') }}" alt="">
+                            <p>Василий Коновалов</p>
+                        </div>
+                        <div class="list-rating personal-bio__skills">
+                            <p>рейтинг по специальности: <span>2</span></p>
+                            <p>кол-во баллов: <span>272</span></p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="list-person">
+                            <img src="{{ url_for('static', filename='img/3.png') }}" alt="">
+                            <p>Василий Коновалов</p>
+                        </div>
+                        <div class="list-rating personal-bio__skills">
+                            <p>рейтинг по специальности: <span>3</span></p>
+                            <p>кол-во баллов: <span>172</span></p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row footer">
+                <div class="footer-top">
+                    <img src="{{ url_for('static', filename='img/expologo.png') }}" alt="" class="footer-top__img">
+                    <div class="footer-top__social">
+                        <img src="{{ url_for('static', filename='img/inst.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/in.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/you.png') }}" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Курсы</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Акселератор</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Нетворкинг</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
+                    <a href="#" class="footer-bottom__call">+ 7 (928) 123-45-67</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

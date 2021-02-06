@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/bootstrap.css" />
-	<link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зарегистрироваться</title>
 </head>
 <body>
     <div class="main-form">
-        <img src="img/logo-dark.png" alt="">
+        <img src="{{ url_for('static', filename='img/logo-dark.png') }}" alt="">
         <div class="form-block">
             <h2 class="form-block__title">Зарегистрируйтесь</h2>
-            <form class="form" action="">
+            <form class="form" action="" method='POST'>
                 <label for="text">Имя и Фамилия</label>
-                <input class="input-item" type="text" name="text">
-                <label for="call">Телефон</label>
-                <input class="input-item" type="number" name="call">
+                <input class="input-item" type="text" name="name">
+                <label for="phone">Телефон</label>
+                <input class="input-item" type="number" name="phone">
                 <label for="email">Email</label>
-                <input class="input-item" type="email" name="enail">
+                <input class="input-item" type="email" name="email">
                 <button class="btn btn-auth">
                     Зарегистрироваться
                 </button>
