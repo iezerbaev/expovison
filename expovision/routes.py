@@ -66,7 +66,8 @@ def lessons():
 
 @app.route('/cabinet', methods=['GET', 'POST'])
 def cabinet():
-    return render_template('cabinet.html')
+    user = User.query.filter_by(email=current_user.email).first()
+    return render_template('cabinet.html', user=user)
 
 
 @app.route('/cabinet-person', methods=['GET', 'POST'])
