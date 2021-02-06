@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>business-lab</title>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container bar-back">
+            <a href="{{ url_for('cabinet') }}">
+                <img src="{{ url_for('static', filename='img/arrow-left.png') }}" alt="">
+                Личный кабинет
+            </a>
+        </div>
+    </div>
+
+    <div class="container program">
+        <p class="program-title">Программа</p>
+        <div class="program-content">
+            <div class="program-content__lists">
+                
+                <div class="program-content__list">
+                    <img src="{{ url_for('static', filename='img/play2.png') }}" alt="">
+                    <div class="program-content__list-text">
+                        <span>Урок 1</span>
+                        <p>Знакомство и ввод</p>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/check.png') }}" alt="">
+                </div>
+                <div class="program-content__list">
+                    <img src="{{ url_for('static', filename='img/play2.png') }}" alt="">
+                    <div class="program-content__list-text">
+                        <span>Урок 2</span>
+                        <p>Как придумать идею</p>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/check.png') }}" alt="">
+                </div>
+                <div class="program-content__list">
+                    <img src="{{ url_for('static', filename='img/play2.png') }}" alt="">
+                    <div class="program-content__list-text">
+                        <span>Урок 3</span>
+                        <p>Как назвать стартап</p>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/check.png') }}" alt="">
+                </div>
+
+                <div class="program-content__list">
+                    <img src="{{ url_for('static', filename='img/play2.png') }}" alt="">
+                    <div class="program-content__list-text">
+                        <span>Урок 4</span>
+                        <p>Как найти инвестора</p>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/check.png') }}" alt="">
+                </div>
+                
+
+                <div class="program-content__list homeWork">
+                    <img src="{{ url_for('static', filename='img/text-document.png') }}" alt="">
+                    <div class="program-content__list-text">
+                        <p>Домашняя работа</p>
+                    </div>
+                    <img src="{{ url_for('static', filename='img/check.png') }}" alt="">
+                </div>
+            </div>
+
+            <div class="program-content__video">
+                <iframe width="100%" height="500" src="https://www.youtube.com/embed/OlNB2Fcknak" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row footer">
+                <div class="footer-top">
+                    <img src="{{ url_for('static', filename='img/expologo.png') }}" alt="" class="footer-top__img">
+                    <div class="footer-top__social">
+                        <img src="{{ url_for('static', filename='img/inst.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/in.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/you.png') }}" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Курсы</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Акселератор</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Нетворкинг</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
+                    <a href="#" class="footer-bottom__call">+ 7 (928) 123-45-67</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
