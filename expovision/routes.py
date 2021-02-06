@@ -25,7 +25,7 @@ def register():
         return flash(f'Пароли не совподают', 'danger')
     if request.form:
         hashed_password = bcrypt.generate_password_hash(request.form.get("password")).decode('utf-8')
-        user = User(username=request.form.get("username"), email=request.form.get("email"), phone=request.form.get("phone"), password=hashed_password)
+        user = User(username=request.form.get("username"), email=request.form.get("email"), phone=request.form.get("phone"), password=hashed_password, fio='fio')
         db.session.add(user)
         db.session.commit()
         flash(f'Аккаунт  создан {request.form.get("username")}! Вы можете войти в свой аккаунт!', 'success')
