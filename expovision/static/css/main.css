@@ -259,8 +259,8 @@ a:hover {
             align-items: center;
     width: 100%; }
     .footer-top__img {
-      max-width: 240px;
-      height: 34px; }
+      max-width: 100%;
+      height: 60px; }
     .footer-top__social img {
       max-width: 100%;
       height: 24px;
@@ -286,8 +286,8 @@ a:hover {
       color: #FFFFFF; }
 
 .main-form img {
-  max-width: 184px;
-  height: 26px;
+  max-width: 100%;
+  height: 50px;
   margin: 50px auto;
   display: -webkit-box;
   display: -webkit-flex;

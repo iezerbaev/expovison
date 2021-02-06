@@ -71,4 +71,4 @@ def cabinet():
 
 @app.route('/cabinet-person', methods=['GET', 'POST'])
 def cabinet_person():
-    return render_template('cabinet.html')
+    return render_template('cabinet-person.html')
