@@ -17,3 +17,11 @@
 Команда для windows `pip install -r requirements.txt`
 
 Команда для linux или macOS `pip3 install -r requirements.txt`
+
+#### Запуск
+
+Для запуска программы используйте файл `expo.py`
+
+Команда для windows `python expo.py`
+
+Команда linux или macOS `python3 expo.py`
