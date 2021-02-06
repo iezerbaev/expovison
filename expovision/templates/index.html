@@ -39,7 +39,7 @@
                     <a class="nav-link nav-auth" href="{{ url_for('logout') }}">Выйти <img src="{{ url_for('static', filename='img/log-out.png') }}" alt=""></a>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link nav-auth" href="{{ url_for('register') }}">
+                    <a class="nav-link nav-auth" href="{{ url_for('login') }}">
                         <img src="{{ url_for('static', filename='img/log-out.png') }}" alt="">
                         Войти</a>
                 </li>
@@ -60,7 +60,7 @@
                 Пройди путь от идеи до успешного продукта под руководством опытных 
                 наставников и получи возможность привлечь инвестиции!
             </p>
-            <a href="#" class="btn btn-study">
+            <a href="{{ url_for('login') }}" class="btn btn-study">
                 Начать обучение
             </a>
         </div>
