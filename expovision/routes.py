@@ -7,7 +7,7 @@ from expovision.models import User
 def index():
     return render_template('index.html')
 
-#ImmutableMultiDict([('text', 'asdf'), ('call', '89292660205'), ('enail', 'wer@mail.ru')])
+
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if current_user.is_authenticated: 
