@@ -72,4 +72,5 @@ def cabinet():
 
 @app.route('/cabinet-person', methods=['GET', 'POST'])
 def cabinet_person():
-    return render_template('cabinet-person.html')
+    user = User.query.filter_by(email=current_user.email).first()
+    return render_template('cabinet-person.html', user=user)

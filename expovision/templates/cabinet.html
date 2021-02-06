@@ -15,7 +15,7 @@
             <div class="personal-bio__info">
                 <img src="{{ url_for('static', filename='img/bio.jpg') }}" alt="">
                 <div class="personal-bio__text">
-                    <p class="personal-bio__text-name">{{user.fio}}</p>
+                    <a href="{{ url_for('cabinet_person') }}" class="personal-bio__text-name"><p class="personal-bio__text-name">{{user.fio}}</p></a>
                     <span class="personal-bio__text-profession">
                         Маркетинг, HR менеджмет, управление проектами
                     </span>
