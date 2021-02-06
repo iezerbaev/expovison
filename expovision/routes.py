@@ -47,7 +47,6 @@ def login():
     return render_template('login.html')
 
 
-
 @app.route('/logout')
 def logout():
     logout_user()
@@ -56,7 +55,8 @@ def logout():
 
 @app.route('/rating', methods=['GET', 'POST'])
 def raiting():
-    return render_template('rating.html')
+    users = User.query.order_by(User.rating.desc()).all()
+    return render_template('rating.html', users=users)
 
 
 @app.route('/lessons', methods=['GET', 'POST'])

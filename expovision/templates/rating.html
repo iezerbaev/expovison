@@ -60,36 +60,18 @@
             </div>
             <div class="rating-item__list">
                 <ol type="1">
+                    {% for user in users %}
                     <li>
                         <div class="list-person">
                             <img src="{{ url_for('static', filename='img/1.png') }}" alt="">
-                            <p>Василий Коновалов</p>
+                            <p>{{ user.fio }}</p>
                         </div>
                         <div class="list-rating personal-bio__skills">
-                            <p>рейтинг по специальности: <span>1</span></p>
-                            <p>кол-во баллов: <span>278</span></p>
+                            <p>рейтинг по специальности: <span>{{ user.rating }}</span></p>
+                            <p>кол-во баллов: <span>{{ user.points }}</span></p>
                         </div>
                     </li>
-                    <li>
-                        <div class="list-person">
-                            <img src="{{ url_for('static', filename='img/2.png') }}" alt="">
-                            <p>Василий Коновалов</p>
-                        </div>
-                        <div class="list-rating personal-bio__skills">
-                            <p>рейтинг по специальности: <span>2</span></p>
-                            <p>кол-во баллов: <span>272</span></p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list-person">
-                            <img src="{{ url_for('static', filename='img/3.png') }}" alt="">
-                            <p>Василий Коновалов</p>
-                        </div>
-                        <div class="list-rating personal-bio__skills">
-                            <p>рейтинг по специальности: <span>3</span></p>
-                            <p>кол-во баллов: <span>172</span></p>
-                        </div>
-                    </li>
+                    {% endfor %}
                 </ol>
             </div>
         </div>
