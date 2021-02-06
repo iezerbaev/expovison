@@ -37,14 +37,21 @@ def register():
 def login():
     if current_user.is_authenticated: 
         return redirect(url_for('index'))
-    print(request.form.get('email'))
-    user = User.query.filter_by(email=request.form.get('email')).first()
-    if user and bcrypt.check_password_hash(user.password, request.form.get('password')):
-        login_user(user, remember=False)
-        return redirect(url_for('index'))
-    else:
-        flash('Не правильный email или пароль', 'danger')
+    if request.form.get('email'):
+        user = User.query.filter_by(email=request.form.get('email')).first()
+        if user and bcrypt.check_password_hash(user.password, request.form.get('password')):
+            login_user(user, remember=False)
+            return redirect(url_for('index'))
+        else:
+            flash('Не правильный email или пароль', 'danger')
     return render_template('login.html')
+
+
+
+@app.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('index'))
 
 
 @app.route('/rating', methods=['GET', 'POST'])

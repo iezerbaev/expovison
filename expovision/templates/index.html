@@ -31,11 +31,16 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Контакты</a>
                 </li>
+                
+                {% if current_user.is_authenticated %}
+                    <a class="nav-link nav-auth" href="{{ url_for('logout') }}">Выйти <img src="{{ url_for('static', filename='img/log-out.png') }}" alt=""></a>
+                {% else %}
                 <li class="nav-item">
                     <a class="nav-link nav-auth" href="{{ url_for('register') }}">
                         <img src="{{ url_for('static', filename='img/log-out.png') }}" alt="">
                         Войти</a>
-                  </li>
+                </li>
+                {% endif %}
               </ul>
             </div>
         </nav>
