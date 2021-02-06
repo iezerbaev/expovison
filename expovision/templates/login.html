@@ -10,22 +10,32 @@
     <title>Войти</title>
 </head>
 <body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+              <div class="alert alert-{{ category }}">
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+    {% endwith %}
     <div class="main-form">
-        <img src="img/logo-dark.png" alt="">
+        <img src="{{ url_for('static', filename='img/logo-dark.png') }}" alt="">
         <div class="form-block">
             <h2 class="form-block__title">Войти</h2>
-            <form class="form" action="">
+            <form class="form" action="", method="POST">
                 <label for="email">Email</label>
-                <input class="input-item" type="email" name="enail">
+                <input class="input-item" type="email" name="email">
                 <label for="pass">Пароль</label>
-                <input class="input-item" type="password" name="pass">
+                <input class="input-item" type="password" name="password">
                 <button class="btn btn-auth">
                     Войти
                 </button>
                 <a href="#" class="forgotPass">Забыли пароль?</a>
             </form>
         </div>
-        <p class="btn-newuser">Новый пользователь? <a href="{{ url_for('static', filename='regist-page.html') }}">Создать учётную запись</a></p>
+        <p class="btn-newuser">Новый пользователь? <a href="{{ url_for('register') }}">Создать учётную запись</a></p>
     </div>
+    
 </body>
 </html>

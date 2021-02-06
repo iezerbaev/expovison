@@ -12,16 +12,39 @@ def index():
 def register():
     if current_user.is_authenticated: 
         return redirect(url_for('index'))
+    email = User.query.filter_by(email=request.form.get("email")).first()
+    username = User.query.filter_by(username=request.form.get("username")).first()
+    phone = User.query.filter_by(phone=request.form.get("phone")).first()
+    if username:
+        return flash(f'Имя пользователя, занято!', 'danger')
+    elif email:
+        return flash(f'Такая почта уже есть в базе!', 'danger')
+    elif phone:
+        return flash(f'Номер телфона уже есть в базе!', 'danger')
+    elif request.form.get("password") != request.form.get("confirm_password"):
+        return flash(f'Пароли не совподают', 'danger')
     if request.form:
-        #hashed_password = bcrypt.generate_password_hash(request.form.get("password")).decode('utf-8')
-        #user = User(username=request.form.get("name"), email=request.form.get("email"), password=hashed_password)
-        user = User(name=request.form.get("name"), email=request.form.get("email"), phone=request.form.get("phone"))
+        hashed_password = bcrypt.generate_password_hash(request.form.get("password")).decode('utf-8')
+        user = User(username=request.form.get("username"), email=request.form.get("email"), phone=request.form.get("phone"), password=hashed_password)
         db.session.add(user)
         db.session.commit()
-        flash(f'Аккаунт  создан {request.form.get("name")}! Вы можете войти в свой аккаунт!', 'success')
-        return redirect(url_for('index'))
+        flash(f'Аккаунт  создан {request.form.get("username")}! Вы можете войти в свой аккаунт!', 'success')
+        return redirect(url_for('login'))
     return render_template('register.html')
 
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if current_user.is_authenticated: 
+        return redirect(url_for('index'))
+    print(request.form.get('email'))
+    user = User.query.filter_by(email=request.form.get('email')).first()
+    if user and bcrypt.check_password_hash(user.password, request.form.get('password')):
+        login_user(user, remember=False)
+        return redirect(url_for('index'))
+    else:
+        flash('Не правильный email или пароль', 'danger')
+    return render_template('login.html')
 
 
 @app.route('/rating', methods=['GET', 'POST'])
