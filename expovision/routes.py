@@ -22,3 +22,23 @@ def register():
         return redirect(url_for('index'))
     return render_template('register.html')
 
+
+
+@app.route('/rating', methods=['GET', 'POST'])
+def raiting():
+    return render_template('rating.html')
+
+
+@app.route('/lessons', methods=['GET', 'POST'])
+def lessons():
+    return render_template('lessons.html')
+
+
+@app.route('/cabinet', methods=['GET', 'POST'])
+def cabinet():
+    return render_template('cabinet.html')
+
+
+@app.route('/cabinet-person', methods=['GET', 'POST'])
+def cabinet_person():
+    return render_template('cabinet.html')
