@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="personal-bio">
+            <div class="personal-bio__info">
+                <img src="{{ url_for('static', filename='img/bio.jpg') }}" alt="">
+                <div class="personal-bio__text">
+                    <p class="personal-bio__text-name">Андрей Иванов</p>
+                    <span class="personal-bio__text-profession">
+                        Маркетинг, HR менеджмет, управление проектами
+                    </span>
+                </div>
+            </div>
+            <div class="personal-bio__skills">
+                <p>заданий выполнено: <span>19</span></p>
+                <p>кол-во баллов: <span>278</span></p>
+                <p>рейтинг: <span>63</span></p>
+            </div>
+            <a href="#" class="personal-cabinet__exit">
+                <img src="{{ url_for('static', filename='img/exit.png') }}" alt="">
+                Выход
+            </a>
+        </div>
+    </div>
+
+    <div class="container competence">
+        <p class="cabinet-title">
+            Компетенция
+        </p>
+        <div class="competence-items">
+            <a class="competence-item" href="#">
+                Маркетинг
+            </a>
+            <a class="competence-item" href="#">
+                HR менеджмент
+            </a>
+            <a class="competence-item" href="#">
+                Project management
+            </a>
+            <a class="competence-item" href="#">
+                Дизайн
+            </a>
+        </div>
+    </div>
+
+    <div class="private-info container">
+        <p class="cabinet-title">
+            Личная информация
+        </p>
+        <ul class="private-info__list">
+            <li>Дата рождения: 16.08.1994</li>
+            <li>Гражданство: Россия</li>
+            <li>Проживание: г. Пятигорск</li>
+            <li>Образование: Высшее</li>
+        </ul>
+    </div>
+
+    <div class="container education">
+        <p class="cabinet-title">
+            Образование
+        </p>
+        <p class="education-suptitle">
+            ФГАОУ ВО «Северо-Кавказский федеральный университет»,
+            Институт математики и естественных наук,
+            направление подготовки «Территориальное планирование и
+            организация туристско рекреационной деятельности».
+        </p>
+    </div>
+
+    <div class="experience container">
+        <p class="cabinet-title">
+            Опыт работы
+        </p>
+        <div class="experience-item">
+            <span>октябрь 2018 -
+                март 2019</span>
+                <div class="experience-item__text">
+                    <p>РОСАТОМ</p>
+                    <span>Администратор</span>
+                    <p>Продвижение и маркетинг, ведение рабочего аккаунта оформление и дизайн, копирайтинг </p>
+                </div>
+        </div>
+        <div class="experience-item">
+            <span>октябрь 2018 -
+                март 2019</span>
+                <div class="experience-item__text">
+                    <p>РОСАТОМ</p>
+                    <span>Администратор</span>
+                    <p>Продвижение и маркетинг, ведение рабочего аккаунта оформление и дизайн, копирайтинг </p>
+                </div>
+        </div>
+    </div>
+
+    <div class="container contact-cabinet">
+        
+        <a class="contact-cabinet__call" href="tel:79281234567">7 928 123-45-67</a>
+        <a class="contact-cabinet__mail" href="mailo:aliev.magomed@bk.ru">aliev.magomed@bk.ru</a>
+    </div>
+
+    
+
+
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row footer">
+                <div class="footer-top">
+                    <img src="{{ url_for('static', filename='img/expologo.png') }}" alt="" class="footer-top__img">
+                    <div class="footer-top__social">
+                        <img src="{{ url_for('static', filename='img/inst.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/in.png') }}" alt="">
+                        <img src="{{ url_for('static', filename='img/you.png') }}" alt="">
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <nav class="navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav">
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Курсы</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Акселератор</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Нетворкинг</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#">Контакты</a>
+                            </li>
+                          </ul>
+                        </div>
+                    </nav>
+                    <a href="#" class="footer-bottom__call">+ 7 (928) 123-45-67</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
